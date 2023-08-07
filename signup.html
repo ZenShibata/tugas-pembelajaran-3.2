@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector("form").addEventListener("submit", e => {
+                e.preventDefault();
+                window.location = 'welcome.html';
+            });
+        });
+    </script>
+    <h1>Buat Account Baru</h1>
+    <h3>Sign Up Form</h3>
+    <form action="">
+        <label for="fname">First Name:</label><br><br>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lname">Last Name:</label><br><br>
+        <input type="text" id="lname" name="lname" required><br><br>
+
+        <label for="gender">Gender</label><br><br>
+        <div>
+            <input type="radio" value="Male">Male</input><br>
+            <input type="radio" value="Female">Female</input><br><br>
+        </div>
+
+        <label id="nationality">Nationality</label><br><br>
+        <select id="nationality" required>
+            <option>Indonesia</option>
+            <option>Jawa</option>
+        </select><br><br>
+
+        <label id="language">Language Spoken</label><br><br>
+        <div>
+            <input type="checkbox" value="Bahasa Indonesia">Bahasa Indonesia</input><br>
+            <input type="checkbox" value="English">English</input><br>
+            <input type="checkbox" value="Jawa">Bahasa Jawa</input><br>
+            <input type="checkbox" value="Other">Other</input><br><br>
+        </div>
+
+        <label for="bio">Bio:</label><br><br>
+        <textarea id="bio" name="bio" rows="10" cols="30" required></textarea><br>
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>
